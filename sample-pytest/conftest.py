@@ -12,11 +12,12 @@ def driver():
     #options = webdriver.ChromeOptions()
     #options.platform_name = "linux"
     #options.browser_version = "109.0"
-    #options.set_capability("enableVideo", "true")
+    options.set_capability("enableVideo", "true")
     ############################################################################################
 
     driver = webdriver.Remote(
-        command_executor=zebrunner_selenium_grid
+        command_executor=zebrunner_selenium_grid,
+        options=options
     )
 
     driver.implicitly_wait(10)
