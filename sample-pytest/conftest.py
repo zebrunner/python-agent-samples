@@ -16,8 +16,7 @@ def driver():
     ############################################################################################
 
     driver = webdriver.Remote(
-        command_executor=zebrunner_selenium_grid,
-        options=options
+        command_executor=zebrunner_selenium_grid
     )
 
     driver.implicitly_wait(10)
